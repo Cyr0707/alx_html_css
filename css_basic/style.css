@@ -8,7 +8,7 @@ html, body {
 }
 
 /* ---------------------------------------------------------------------- */
-/* GLOBAL PAGE LAYOUT (Designed for index.html structure) */
+/* GLOBAL PAGE LAYOUT (Flexbox Positioning) */
 /* ---------------------------------------------------------------------- */
 
 /* 1. BODY: Main Flex Container - Column Layout (Header, Main, Footer Stacked) */
@@ -26,7 +26,7 @@ header, footer {
     color: white;
 }
 
-/* Navigation Styling (for both index.html and tweets.html) */
+/* Navigation Styling */
 header nav ul {
     list-style: none;
     padding: 0;
@@ -44,7 +44,7 @@ header nav ul li a:hover {
     color: #ced4da;
 }
 
-/* 3. MAIN: Primary Content Area (Must take all available vertical space) */
+/* 3. MAIN: Primary Content Area (Takes all available vertical space) */
 main {
     display: flex; /* REQUIRED: display: flex */
     flex-direction: row; /* REQUIRED: flex-direction: row */
@@ -72,7 +72,7 @@ aside {
     border-left: 1px solid #dee2e6;
 }
 
-/* Table Styling for index.html */
+/* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -92,6 +92,7 @@ thead th {
 tbody tr:hover {
     background-color: #f8f9fa;
 }
+
 /* Style for clickable image */
 article img {
     max-width: 200px;
@@ -106,15 +107,9 @@ article img:hover {
     border-color: #007bff;
 }
 
-/* ---------------------------------------------------------------------- */
-/* TWEET/POST LAYOUT (Designed for tweets.html structure) */
-/* ---------------------------------------------------------------------- */
-
-/* Container for a list of tweets/posts */
+/* TWEET/POST LAYOUT (Styling for reference, even though not on this page) */
 .tweet-list {
-    /* Use Grid for flexible and responsive card layout */
     display: grid;
-    /* Auto-fill columns, ensuring a minimum width of 300px for each card */
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
     padding: 1.5rem;
@@ -145,7 +140,7 @@ article img:hover {
 @media (max-width: 768px) {
     /* Main Content: Change to vertical stacking */
     main {
-        flex-direction: column; 
+        flex-direction: column;  
     }
 
     /* Article and Aside: Take full width and limited height */
@@ -156,4 +151,3 @@ article img:hover {
         border-bottom: 1px solid #dee2e6;
     }
 }
-
